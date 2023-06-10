@@ -1,0 +1,921 @@
+/* RESPONSIVENESS */
+@media  (max-width: 1366px) {
+  html{
+    font-size: 62.5%;
+  }
+
+  .hero .content{
+    margin-bottom: 30rem;
+  }
+
+  .features{
+    min-height: 100vh;
+  }
+  
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .arrow-up-icon{
+    width: 5rem;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  html{
+    font-size: 50%;
+  }
+
+  .arrow-up-icon{
+    width: 5rem;
+  }
+
+  #hamburger-menu{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .profile-side{
+    margin-right: 16px;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .hero .content{
+    margin-bottom: 30rem;
+  }
+
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* GLOBAL */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial;
+  color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #252544;
+}
+
+/* HOME PAGE */
+
+.arrow-up-icon{
+  width: 2rem;
+}
+
+.to-top{
+  background-color: rgba(177, 214, 231, 0.8);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  border-color: #3A6A89;
+  border-width: 5px;
+  font-size: 32px;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.to-top.active{
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* HEADER */
+header{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LEFT SECTION */
+.game-logo{
+  width: 20rem;
+  cursor: pointer;
+}
+
+/* MIDDLE SECTION */
+.navbar a{
+  display: inline-block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 3rem;
+}
+
+.navbar a:hover{
+  color: black;
+}
+
+.navbar .active-link{
+  background-color: #b1d6e7;
+  color: black;
+  border-radius: 4rem;
+  padding: 0 0.8rem;
+}
+
+.navbar .active-link:hover{
+  color: white;
+  background-color: black;
+}
+
+/* RIGHT SECTION */
+.extras{
+  display: flex;
+}
+
+.profile-side{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic{
+  width: 4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.profile-name{
+  margin-top: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+.hamburger-menu:hover{
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(0deg, rgba(37, 37, 68, 0.5), rgba(37, 37, 68, 0.5)), url(images/home-background_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 125vh;
+  width: 100%;
+  background-position: center;
+  margin-top: -2rem;
+}
+
+.hero .content{
+  display: flex;
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.video-section{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.video-section h1{
+  margin-top: 2rem;
+}
+
+.hero .tagline{
+  font-style: italic;
+  font-size: 3.5em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hero .game-description{
+  font-weight: 200;
+  color: #B1D6E7;
+  font-size: 1.1em;
+  text-align: justify;
+  margin-top: 2rem;
+  width: 45rem;
+}
+
+.play-button{
+  display: inline-block;
+  border: none;
+  color: #B1D6E7;
+  background-color: rgba(37, 37, 68, 0.5);
+  border-color: #B1D6E7;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  font-size: 2.2em;
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-width: 0.3rem;
+  margin-top: 4rem;
+  text-decoration: none;
+}
+
+.play-button:hover{
+  opacity: 0.5;
+}
+
+/* .video-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+
+/* FEATURES */
+.features{
+  position: relative;
+  min-height: 200vh;
+  background-image: linear-gradient(0deg, rgba(37, 37, 68, 0.5), rgba(37, 37, 68, 0.5)) ,url(images/stars-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+
+.features .content{
+  padding: 3rem 7% 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.features .features-text{
+  font-size: 4em;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.features-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10rem;
+  column-gap: 20rem;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.feature-box{
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(217, 217, 217, 0.2);
+  border-color: #B1D6E7;
+  border-width: 0.3rem;
+  border-style: solid;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.feature-img{
+  width: 18rem;
+  height: 12rem;
+  background-color: white;
+  align-items: center;
+  margin-top: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.feature-desc{
+  font-weight: 200;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.feature-box-text{
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* WHERE TO PLAY SECTION */
+.play-section{
+  position: relative;
+  background-image: linear-gradient(0deg, rgba(37, 37, 68, 0.5), rgba(37, 37, 68, 0.5)) , url(images/Obsidian_Citadel.png);
+  min-height: 200vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+
+.play-section .content{
+  padding: 3rem 7% 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.play-section .content .text-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-text{
+  font-size: 6em;
+  margin-top: 2rem;
+}
+
+.play-tagline{
+  font-size: 2.1em;
+  color: #B1D6E7;
+}
+
+.available-stores-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15rem;
+}
+
+.store-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-circles{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 8rem;
+  background-color: white;
+  flex: 1;
+}
+
+.steam-logo{
+  padding: 1rem 1rem;
+  width: 13rem;
+  height: 13rem;
+}
+
+.play-store-logo{
+  padding: 3rem 3.5rem;
+  width: 9rem;
+  height: 9rem;
+}
+
+.switch-logo{
+  padding: 2.5rem 2.5rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.store-button{
+  display: inline-block;
+  border: none;
+  color: #B1D6E7;
+  background-color: rgba(37, 37, 68, 0.5);
+  border-color: #B1D6E7;
+  font-weight: bold;
+  padding: 0.4rem 1.4rem;
+  font-size: 2.2em;
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-width: 0.3rem;
+  margin-top: 4rem;
+  text-decoration: none;
+}
+
+.store-button:hover{
+  opacity: 0.5;
+}
+
+/* FOOTER */
+.footer{
+  position: relative;
+  min-height: 150vh;
+  background-image: linear-gradient(0deg, rgba(37, 37, 68, 0.5), rgba(37, 37, 68, 0.5)) , url(images/The\ Necropolis\ of\ the\ Undead.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180vh;
+  width: 100%;
+  background-position: center;
+}
+
+.footer .content{
+  padding: 30rem 7% 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15rem;
+}
+
+.footer-logo{
+  width: 32rem;
+}
+
+.copyright-text{
+  text-align: center;
+  color: #b1d6e7;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+/* HOME PAGE */
+
+
+/* CHARACTERS PAGE */
+
+.characters-page{
+  position: relative;
+  min-height: 230vh;
+  background-image: linear-gradient(0deg, rgba(37, 37, 68, 0.5), rgba(37, 37, 68, 0.5)), url(images/stars-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 125vh;
+  width: 100%;
+  background-position: center;
+}
+
+.characters-page .content{
+  padding: 3rem 7% 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heroes-section-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.characters-page .char-title-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4rem;
+  margin-top: 6rem;
+}
+
+.char-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.char-circles:hover{
+  opacity: 0.5;
+}
+
+.char-circles{
+  background-color: rgba(37, 37, 68, 0.5);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 8rem;
+  margin-top: 4rem;
+  flex: 1;
+  border-style: solid;
+  border-color: #B1D6E7;
+  border-width: 0.3rem;
+}
+
+.char-name{
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #3A6A89;
+}
+
+.detail-info-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3A6A89;
+  margin-top: 8rem;
+}
+
+.char-links{
+  text-decoration: none;
+}
+
+
+/* CHARACTER DETAIL PAGE */
+
+.char-detail-page{
+  position: relative;
+  min-height: 150vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 125vh;
+  width: 100%;
+  background-position: center;
+}
+
+.char-detail-page .content{
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 7% 1.4rem;
+}
+
+.char-detail-page .name, .char-detail-page .role{
+  font-size: 4rem;
+}
+
+.char-detail-page .left-side{
+  flex: 1;
+  width: 50rem;
+}
+
+.char-description{
+  display: block;
+  font-weight: 200;
+  text-align: justify;
+  color: #B1D6E7;
+  width: 50rem;
+  margin-top: 1rem;
+}
+
+.play-button-char-page{
+  display: inline-block;
+  border: none;
+  color: #B1D6E7;
+  background-color: rgba(37, 37, 68, 0.5);
+  border-color: #B1D6E7;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 2.2em;
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-width: 0.3rem;
+  margin-top: 3rem;
+  text-decoration: none;
+}
+
+.play-button-char-page:hover{
+  opacity: 0.5;
+}
+
+.animation-grid{
+  width: 42rem;
+  display: grid;
+  grid-template-columns: 1rem 1rem 1rem 1rem;
+  column-gap: 10rem;
+}
+
+.animation-grid .animation-box{
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 8rem;
+  height: 8rem;
+  margin-top: 5rem;
+  border-radius: 1rem;
+  border-color: #B1D6E7;
+  border-style: solid;
+  border-width: 0.3rem;
+}
+
+.animation_1{
+  display: inline-block;
+  width: 12rem;
+  margin-left: -2rem;
+  margin-top: -1.5rem;
+}
+
+.animation_2{
+  display: inline-block;
+  width: 12rem;
+  margin-left: -2rem;
+  margin-top: -2.4rem;
+}
+
+.animation_3{
+  display: inline-block;
+  width: 12rem;
+  margin-left: 1rem;
+  margin-top: -4.6rem;
+}
+
+.animation_4{
+  display: inline-block;
+  width: 12rem;
+  margin-left: -2.3rem;
+  margin-top: -2.4rem;
+}
+
+.potrait-image{
+  margin-left: 49rem;
+  margin-top: -44.8rem;
+  display: block;
+  width: 40rem;
+}
+
+.char-image{
+  width: 9rem;
+  padding: 1.5rem 2.8rem;
+  border-radius: 8rem;
+}
+
+/* CHARACTERS PAGE */
+
+/* LOGIN & REGISTER PAGE */
+
+.login-reg-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button, .reg-button{
+  color: black;
+  font-size: 3em;
+  font-weight: 700;
+  padding: 1rem 1rem;
+  border-style: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-button{
+  border-bottom-right-radius: 2rem;
+  color: white;
+  background-color: black;
+}
+
+.login-button:hover{
+  opacity: 0.5;
+}
+
+.reg-button{
+  border-bottom-left-radius: 2rem;
+  color: black;
+  background-color: #B1D6E7;
+}
+
+.reg-button:hover{
+  opacity: 0.5;
+}
+
+.login-reg-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+  overflow: hidden;
+
+}
+
+.reg-account-container{
+ display: flex;
+ flex-direction: column;
+ flex: 1;
+ margin-left: 5rem;
+ margin-bottom: 10rem;
+}
+
+.login-account-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 5rem;
+  margin-bottom: 30rem;
+}
+
+.login-reg-content input, .login-reg-content select{
+  color: rgba(0, 0, 0, 0.5);
+  width: 25rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-style: solid;
+  margin-top: 2rem;
+  border-color: black;
+  border-width: 0.15rem;
+  border-radius: 0.7rem;
+}
+
+.login-reg-content .country{
+  width: 28.4rem;
+  color: black;
+}
+
+
+.login-reg-content option, .login-reg-content optgroup{
+  color: black;
+  background-color: #3A6A89;
+  color: #B1D6E7;
+}
+
+.login-reg-content input:focus{
+  color: black;
+}
+
+
+.game-info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-bottom: 10rem;
+}
+
+.game-info-container .game-title{
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.game-info-container .game-desc{
+  text-align: center;
+  width: 30rem;
+  font-weight: 200;
+  color: #B1D6E7;
+  font-size: 1.3rem;
+}
+
+.terms-service-container{
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 2rem;
+}
+
+.agree-check{
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 1;
+}
+
+.agree-text{
+  flex: 25;
+  margin-left: 1rem;
+  font-weight: 200;
+  justify-content: left;
+  padding-top: 2rem;
+}
+
+.policy-text{
+  font-weight: 200;
+  width: 35rem;
+}
+
+.agree-text a, .policy-text a{
+  color: #B1D6E7;
+}
+
+.reg-login-icon{
+  width: 3rem;
+}
+
+.username{
+  background-image: url(images/user.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.8rem;
+  background-repeat: no-repeat;
+}
+
+.username{
+  background-image: url(images/user.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.7rem;
+  background-repeat: no-repeat;
+}
+
+.password{
+  background-image: url(images/padlock.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.7rem;
+  background-repeat: no-repeat;
+}
+
+.email{
+  background-image: url(images/email.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.7rem;
+  background-repeat: no-repeat;
+}
+
+.phone{
+  background-image: url(images/smartphone-call.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.7rem;
+  background-repeat: no-repeat;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
+.country{
+  background-image: url(images/placeholder.png);
+  position: left;
+  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-size: 2.8rem;
+  background-repeat: no-repeat;
+}
+
+.reg-login-button{
+  display: inline-block;
+  border: none;
+  color: #B1D6E7;
+  background-color: rgba(37, 37, 68, 0.5);
+  border-color: #B1D6E7;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  font-size: 2.2em;
+  border-radius: 0.8rem;
+  border-style: solid;
+  border-width: 0.3rem;
+  margin-top: 4rem;
+  text-decoration: none;
+}
+
+.reg-login-button:hover{
+  opacity: 0.5;
+}
+
+.error{
+  color: red;
+  background-color: #e9d7db;
+  padding: 1rem;
+  display: none;
+  width: 30rem;
+}
+
+.error.display-error{
+  display: block;
+  position: absolute;
+  transform: translateY(rem);
+
+  z-index: 999;
+  
+}
+
+.success{
+  margin-bottom: 2rem;
+  color: green;
+  background-color: darkgreen;
+  padding: 10px;
+  display: none;
+}
+
+.success.display-success{
+  display: block;
+}
+
+input:focus{
+  outline: none;
+}
+
+/* LOGIN & REGISTER PAGE */
