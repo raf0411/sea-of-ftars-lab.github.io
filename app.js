@@ -1,3 +1,5 @@
+// Scroll to top button
+
 const toTop = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => 
@@ -11,6 +13,8 @@ window.addEventListener("scroll", () =>
     toTop.classList.remove("active");
   }
 })
+
+// Register Form
 
 function showError(errorElement, errorMessage){
   document.querySelector("."+errorElement).classList.add("display-error");
@@ -48,6 +52,12 @@ function validateForm(event)
     return false;
   }
 
+  if(username.length < 4)
+  {
+    showError("username-error", "Username must at least contain 4 characters!");
+    return false;
+  }
+
   if(form.password.value == "")
   {
     showError("password-error", "You have to enter a password!");
@@ -66,9 +76,15 @@ function validateForm(event)
     return false;
   }
 
+  if(email.length < 12)
+  {
+    showError("email-error", "You must enter a valid email name!");
+    return false;
+  }
+
   if(!email.endsWith("@gmail.com"))
   {
-    showError("email-error", "You need to enter either @gmail.com, @yahoo.com, or @outlook.com emails!");
+    showError("email-error", "You need to enter a google account @gmail.com!");
     return false;
   }
 
@@ -84,6 +100,12 @@ function validateForm(event)
     return false;
   }
 
+  if(phone.length < 12)
+  {
+    showError("phone-error", "Phone number must at least contain 12 numbers!");
+    return false;
+  }
+
   if(country == "0")
   {
     showError("country-error", "You have to enter a country!");
@@ -96,12 +118,14 @@ function validateForm(event)
     return false;
   }
 
-  alert("SUCCESSFULLY REGISTERED!")
-  homePage()
+  
 
-  document.querySelectorAll(".success").classList.add("display-success");
+  document.querySelector(".success").classList.add("display-success");
   document.querySelector(".success").innerHTML = "Your registration was successful";
 
+  alert("SUCCESSFULLY REGISTERED!")
+  homePage()
+  
   event.preventDefault();
 }
 
@@ -139,3 +163,20 @@ function homePage()
 {
   window.location.href = "index.html"
 }
+
+// Hamburger Menu
+
+const navbarNav = document.querySelector('.navbar');
+
+document.querySelector('#hamburger-menu').onclick = () => {
+  navbarNav.classList.toggle('active');
+}
+
+const hamburger = document.querySelector('#hamburger-menu');
+
+document.addEventListener('click', function(event){
+  if(!hamburger.contains(event.target) && !navbarNav.contains(event.target))
+  {
+    navbarNav.classList.remove('active');
+  }
+});

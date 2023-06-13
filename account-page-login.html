@@ -17,11 +17,11 @@
 <body>
   
   <div class="login-reg-container">
-    <a href="account-page-register.html" class="reg-button" style="background-color: black; color: white;">
+    <a href="account-page-register.html" class="reg-button-1">
       REGISTER
     </a>
 
-    <a href="account-page-login.html" class="login-button" style="background-color: #b1d6e7; color: black;">
+    <a href="account-page-login.html" class="login-button-1">
       LOGIN
     </a>
   </div>
@@ -29,10 +29,10 @@
 
   <main class="login-reg-content">
 
-    <div class="login-account-container" style="display: inline-block;">
+    <div class="login-account-container">
 
-      <form name="login-form" action="" method="post" autocomplete="off">
-        <input class="username" id="username" type="text" placeholder="Username" style="margin-bottom: 2rem;">
+      <form name="register-form" action="" method="post" autocomplete="off">
+        <input class="username" id="username" type="text" placeholder="Username">
         <p class="error username-error"></p>
       
         <input class="password" id="password" type="password" placeholder="Password">
@@ -41,13 +41,13 @@
     
       <br>  
 
-      <button class="reg-login-button" onclick="validateForm(event)" style="margin-left: 8rem;">
+      <button class="reg-login-button" onclick="validateForm(event)">
         LOGIN
       </button>
 
     </div>
   
-    <div class="game-info-container" style="margin-top: -20rem;">
+    <div class="game-info-container-1">
       <h1 class="game-title">SEA OF FTARS</h1>
 
       <p class="game-desc">
@@ -57,7 +57,7 @@
     </div>
   </main>
 
-  <script defer src="app.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>
