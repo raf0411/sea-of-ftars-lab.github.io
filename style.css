@@ -1,87 +1,3 @@
-/* RESPONSIVENESS */
-@media (max-width: 1300px) {
-
-  html{
-    font-size: 62.5%;
-  }
-
-  .hero .content{
-    margin-bottom: 30rem;
-  }
-
-  .features{
-    min-height: 100vh;
-  }
-  
-  .features-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .arrow-up-icon{
-    width: 5rem;
-  }
-
-  embed, .trailer-text{
-    display: none;
-  }
-
-}
-
-@media (max-width: 768px){
-  html{
-    font-size: 50%;
-  }
-
-  embed, .trailer-text{
-    display: none;
-  }
-
-  .arrow-up-icon{
-    width: 5rem;
-  }
-
-  #hamburger-menu{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-  }
-
-  .profile-side{
-    margin-right: 16px;
-  }
-
-  .navbar{
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #3A6A89;
-    width: 20rem;
-    height: 100vh;
-    transition: 0.4s;
-  }
-
-  .navbar a{
-    display: block;
-    margin: 2rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar.active{
-    right: 0;
-  }
-
-  .hero .content{
-    margin-bottom: 30rem;
-  }
-
-  .features-grid{
-    grid-template-columns: 1fr;
-  }
-
-}
-
 /* GLOBAL */
 *{
   margin: 0;
@@ -1342,4 +1258,101 @@ input:focus{
 
 .fan-arts-grid-2{
   margin-top: 2rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1200px) {
+
+  html{
+    font-size: 60%;
+  }
+
+  .hero .content{
+    margin-bottom: 30rem;
+  }
+
+  .features{
+    min-height: 100vh;
+  }
+  
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .arrow-up-icon{
+    width: 5rem;
+  }
+
+  embed, .trailer-text{
+    display: none;
+  }
+
+  .arrow-up-icon{
+    width: 24px;
+  }
+
+}
+
+@media (max-width: 768px){
+  html{
+    font-size: 50%;
+  }
+
+  embed, .trailer-text{
+    display: none;
+  }
+
+  .arrow-up-icon{
+    width: 5rem;
+  }
+
+  #hamburger-menu{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .profile-side{
+    margin-right: 16px;
+  }
+
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: rgba(2, 25, 40);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.4s;
+    overflow: hidden;
+  }
+
+  .navbar a{
+    display: block;
+    margin: 2rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar.active{
+    left: 0;
+  }
+
+  .hero .content{
+    margin-bottom: 30rem;
+  }
+
+  .features-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .arrow-up-icon{
+    width: 24px;
+  }
+
+  .navbar a:hover{
+    color: #B1D6E7;
+  }
+
 }
